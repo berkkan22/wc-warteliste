@@ -1,0 +1,22 @@
+{
+  "name": "wcwarteliste",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "package-win64": "electron-packager . --overwrite --platform=win32  --arch=x64",
+    "package-win32": "electron-packager . --overwrite --platform=win32  --arch=ia32",
+    "package-linux64": "electron-packager . --overwrite --platform=linux --arch=x64",
+    "package-linux32": "electron-packager . --overwrite --platform=linux --arch=ia32"
+  },
+  "author": "Berkkan Katirci",
+  "license": "MIT",
+  "devDependencies": {
+    "electron-packager": "^13.0.1"
+  },
+  "dependencies": {
+    "electron": "^4.0.4",
+    "electron-winstaller": "^2.7.0"
+  }
+}

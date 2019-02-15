@@ -1,0 +1,289 @@
+body,
+h1,
+h2,
+h3,
+p {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#main {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: gray;
+}
+
+#wcBackground {
+    width: 100%;
+    height: 65%;
+    background: green;
+}
+
+#wc {
+    text-align: center;
+    font-size: 19vh;
+    padding-top: 14vh;
+}
+
+#frei {
+    text-align: center;
+    font-size: 9vh;
+    padding-top: 10px;
+}
+
+#divnames {
+    width: 100%;
+    height: 35%;
+    /* background: red; */
+    /* display: table; */
+}
+
+#init {
+    height: 15%;
+    width: 100%;
+    background: rgb(64, 123, 201);
+}
+
+#addBtn {
+    /* height: 5.5vh;
+    width: 100px;
+    float: left;
+    background: black;
+    margin-top: 8vh;
+    border: 0; */
+
+    box-sizing: border-box;
+    position: absolute;
+    position: absolute;
+    top: 55.5%;
+    left: 42%;
+    float: left;
+}
+
+.btn {
+    border-radius: 3px;
+}
+
+.btn-info {
+    color: #fff;
+    background-color: #5bc0de;
+    border-color: #46b8da;
+    text-decoration: none;
+}
+
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.btn-lg {
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.3333333;
+    border-radius: 6px;
+}
+
+.glyphicon {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.glyphicon-plus:before {
+    content: "\2b";
+}
+
+#nameInput {
+    font-size: 4vh;
+    height: 5vh;
+    width: 38vw;
+    max-width: 420px;
+    min-width: 200px;
+    margin-top: 8vh;
+    float: left;
+}
+
+.divTableBody {
+    width: 100%;
+    height: 85%;
+}
+
+.divTableRow {
+    width: 100%;
+    height: 25%;
+    /* background: blue; */
+}
+
+.divTableRow {
+    width: 100%;
+    height: 25%;
+    /* background: red; */
+    border-bottom: 1.5px solid;
+}
+
+#firstrow {
+    border-top: 2px solid;
+}
+
+/* #lastrow{
+    border-bottom: 2px solid;
+} */
+
+.divTableCell {
+    width: 33.3%;
+    height: 100%;
+    float: left;
+    line-height: 8vh;
+    font-size: 1.7em
+}
+
+.id {
+    float: left;
+    width: 15%;
+    max-width: 60px;
+    min-width: 40px;
+    background: rgb(22, 99, 201);
+    text-align: center;
+    height: 99%;
+}
+
+.nameOutput {
+    padding-left: 6px;
+    float: left;
+    background: gray;
+    min-width: 145px;
+    display: block;
+    height: 98%;
+}
+
+#cell0Blue {
+    background: green;
+}
+
+.container {
+    width: 33.3%;
+    height: 100%;
+    float: left;
+}
+
+.nummer {
+    float: left;
+    width: 15%;
+    min-width: 40px;
+    max-width: 60px;
+    height: 100%;
+    background: rgb(134, 170, 199);
+    font-size: 1.5em;
+    text-align: center;
+    line-height: 5vh;
+    border-right: 1.5px solid;
+    border-left: 1.5px solid;
+}
+
+#firstNr {
+    border-left: 0px solid;
+}
+
+.name {
+    float: left;
+    height: 100%;
+    /* background: greenyellow; */
+    min-width: 145px;
+    font-size: 1.5em;
+    text-align: center;
+    line-height: 5vh;
+}
+
+#bottomInput {
+    padding-left: 15px;
+}
+
+
+
+#snackbar,
+#snackbar1 {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+
+#snackbar.show,
+#snackbar1.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+#cross {
+    background: red;
+    height: 50px;
+    position: relative;
+    width: 14px;
+    left: 36px;
+    top: 3px;
+}
+
+#cross:after {
+    background: red;
+    content: "";
+    height: 13px;
+    left: -20px;
+    position: absolute;
+    top: 19px;
+    width: 56px;
+}
+
+#next {
+    width: 100px;
+    height: 100px;
+    background: red;
+    float: right;
+    position: absolute;
+    top: 44vh;
+    right: 2%;
+}
+
+#arrow {
+    width: 0;
+    height: 0;
+    margin-left: 10px;
+    margin-top: 5px;
+    border-top: 40px solid transparent;
+    border-left: 81px solid green;
+    border-bottom: 50px solid transparent;
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>WC warte Liste</title>
+</head>
+
+<body>
+
+    <div id="snackbar">Ungüliger Name</div>
+    <div id="snackbar1">Kein Platz</div>
+
+    <div id="main">
+        <div id="wcBackground">
+            <h1 id="wc">WC</h1>
+            <h1 id="frei">frei</h1>
+            <div id="bottomInput">
+                <input id="nameInput" type="text" placeholder="Name" autofocus>
+                <div id="addBtn" onclick="add()">
+                    <!-- <div id="cross"></div> -->
+                    <a href="#" class="btn btn-info btn-lg">
+                        <span class="glyphicon glyphicon-plus"></span>
+                        Hinzufügen
+                    </a>
+                </div>
+                <div id="next" onclick="next()">
+                    <div id="arrow"></div>
+                </div>
+            </div>
+        </div>
+        <div id="divnames">
+            <div id="init">
+                <div class="container">
+                    <div class="nummer" id="firstNr"    >Nr.</div>
+                    <div class="name">Name</div>
+                </div>
+                <div class="container">
+
+                    <div class="nummer">Nr.</div>
+                    <div class="name">Name</div>
+                </div>
+                <div class="container">
+                    <div class="nummer">Nr.</div>
+                    <div class="name">Name</div>
+                </div>
+
+            </div>
+            <div class="divTableBody">
+                <div class="divTableRow" id="firstrow">
+                    <div class="divTableCell">
+                        <div class="id" id="cell0Blue">
+                            <p class="idcell" id="cell0">1</p>
+                        </div>
+                        <div class="nameOutput">
+                            <p id="output0"></p>
+                        </div>
+                    </div>
+                    <div class="divTableCell">
+                        <div class="id">
+                            <p class="idcell" id="cell4">5</p>
+                        </div>
+                        <div class="nameOutput">
+                            <p id="output4"></p>
+                        </div>
+                    </div>
+                    <div class="divTableCell">
+                        <div class="id">
+                            <p class="idcell" id="cell8">9</p>
+                        </div>
+                        <div class="nameOutput">
+                            <p id="output8"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="divTableRow">
+                    <div class="divTableCell">
+                        <div class="id" id="cell1Blue">
+                            <p class="idcell" id="cell1">2</p>
+                        </div>
+                        <div class="nameOutput">
+                            <p id="output1"></p>
+                        </div>
+                    </div>
+                    <div class="divTableCell">
+                        <div class="id">
+                            <p class="idcell" id="cell5">6</p>
+                        </div>
+                        <div class="nameOutput">
+                            <p id="output5"></p>
+                        </div>
+                    </div>
+                    <div class="divTableCell">
+                        <div class="id">
+                            <p class="idcell" id="cell9">10</p>
+                        </div>
+                        <div class="nameOutput">
+                            <p id="output9"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="divTableRow">
+                    <div class="divTableCell">
+                        <div class="id">
+                            <p class="idcell" id="cell2">3</p>
+                        </div>
+                        <div class="nameOutput">
+                            <p id="output2"></p>
+                        </div>
+                    </div>
+                    <div class="divTableCell">
+                        <div class="id">
+                            <p class="idcell" id="cell6">7</p>
+                        </div>
+                        <div class="nameOutput">
+                            <p id="output6"></p>
+                        </div>
+                    </div>
+                    <div class="divTableCell">
+                        <div class="id">
+                            <p class="idcell" id="cell10">11</p>
+                        </div>
+                        <div class="nameOutput">
+                            <p id="output10"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="divTableRow" id="lastrow">
+                    <div class="divTableCell">
+                        <div class="id">
+                            <p class="idcell" id="cell3">4</p>
+                        </div>
+                        <div class="nameOutput">
+                            <p id="output3"></p>
+                        </div>
+                    </div>
+                    <div class="divTableCell">
+                        <div class="id">
+                            <p class="idcell" id="cell7">8</p>
+                        </div>
+                        <div class="nameOutput">
+                            <p id="output7"></p>
+                        </div>
+                    </div>
+                    <div class="divTableCell">
+                        <div class="id">
+                            <p class="idcell" id="cell11">12</p>
+                        </div>
+                        <div class="nameOutput">
+                            <p id="output11"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p id="p3"></p>
+        </div>
+    </div>
+
+    <script src="create_user.js"></script>
+</body>
+
+</html>
