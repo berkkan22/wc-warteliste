@@ -22,24 +22,27 @@ input.addEventListener("keyup", function (event) {
 
 function add() {
     var name = document.getElementById("nameInput").value;
-    console.log(name);
+    var firstname = document.getElementById("output0").innerHTML;
+    // console.log(name);
 
     if (namesArray.length < 12 && name !== "" && name !== " " && name.length < 20) {
         namesArray.push(name);
-        console.log(namesArray);
+        // console.log(namesArray);
         document.getElementById('nameInput').value = null;
         document.getElementById('nameInput').style.borderColor = '';
-        var start = new Date().getTime();
-    }
-    else if(namesArray.length == 12){
+    } else if (namesArray.length == 12) {
         snackBar_Platz();
         document.getElementById('nameInput').style.borderColor = 'red';
-    }
-    else {
+    } else {
         document.getElementById('nameInput').style.borderColor = 'red';
         document.getElementById('nameInput').value = null;
         snackBar_Name();
     }
+
+    // console.log(namesArray);
+    // if(firstname == namesArray[0]){
+    //     userOnFirstPlace(firstname);
+    // }
 
     displayName(namesArray);
 
@@ -71,6 +74,7 @@ var click = false;
 var booluser = false;
 
 function next() {
+    // var state = true;
     var backgrounddiv = document.getElementById('wcBackground');
     var text = document.getElementById('frei');
     var idcell = document.getElementById('cell0Blue');
@@ -103,17 +107,19 @@ function next() {
             skipUser();
         }
     }
+    var name = document.getElementById('output0').innerHTML;
+    userOnFirstPlace(name);
 }
 
 var removeedUserConut = 0;
 
 function skipUser() {
     if (booluser) {
-        console.log("remove");
+        // console.log("remove");
         removeedUserConut++;
         removeUser();
     } else {
-        console.log("not remove");
+        // console.log("not remove");
     }
 }
 
@@ -122,29 +128,42 @@ function removeUser() {
 
     displayName(namesArray);
 
-    console.log(namesArray.length);
+    // console.log(namesArray.length);
 }
 
 
 
-// time mesur
-for (i = 0; i < 50000; ++i) {
-// do something
-}
-
-var end = new Date().getTime();
-var time = end - start;
-alert('Execution time: ' + time);
+// function userOnFirstPlace(name) {
+//     var start = new Date().getTime();
+//     console.log(start);
+    // var start = new Date().getTime();
+    // console.log(name)
 
 
-function snackBar_Name(){
+    // setInterval(function () {
+    //     var end = new Date().getTime();
+    //     console.log(end)
+    // }, 3000);
+// }
+
+
+// var end = new Date().getTime();
+// var time = end - start;
+// alert('Execution time: ' + time);
+
+
+function snackBar_Name() {
     var x = document.getElementById("snackbar");
     x.className = "show";
-    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+    setTimeout(function () {
+        x.className = x.className.replace("show", "");
+    }, 3000);
 }
 
-function snackBar_Platz(){
+function snackBar_Platz() {
     var x = document.getElementById("snackbar1");
     x.className = "show";
-    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+    setTimeout(function () {
+        x.className = x.className.replace("show", "");
+    }, 3000);
 }

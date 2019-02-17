@@ -58,8 +58,8 @@ p {
     position: absolute;
     position: absolute;
     top: 55.5%;
-    left: 42%;
-    float: left;
+    left: 24%;
+        float: left;
 }
 
 .btn {
@@ -274,7 +274,7 @@ p {
     background: red;
     float: right;
     position: absolute;
-    top: 44vh;
+    top: 52vh;
     right: 2%;
 }
 
@@ -286,4 +286,105 @@ p {
     border-top: 40px solid transparent;
     border-left: 81px solid green;
     border-bottom: 50px solid transparent;
+}
+
+p{
+    font-size: 42px;
+}
+
+@media (max-height: 800px){
+    #next{
+        top: 49vh;
+    }
+}
+
+@media (max-width: 1850px){
+    #addBtn{
+        left: 26%;
+    }
+}
+
+@media (max-width: 1700px){
+    #addBtn{
+        left: 28%;
+    }
+}
+
+@media (max-width: 1580px){
+    #addBtn{
+        left: 29%;
+    }
+}
+
+@media (max-width: 1540px){
+    #addBtn{
+        left: 31%;
+    }
+}
+
+@media (max-width: 1450px){
+    #addBtn{
+        left: 33%;
+    }
+}
+
+@media (max-width: 1350px){
+    #addBtn{
+        left: 35%;
+    }
+}
+
+@media (max-width: 1260px){
+    #addBtn{
+        left: 37%;
+    }
+
+    p{
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 1200px){
+    #addBtn{
+        left: 39%;
+    }
+
+    .btn-lg {
+        display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    margin-top: 6px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    }
+}
+
+@media (max-width: 1135px){
+    #addBtn{
+        left: 37%;
+    }
+
+    #nameInput{
+        font-size: 3vh;
+        height: 4vh;
+        width: 33vw;
+        max-width: 420px;
+        min-width: 200px;
+        margin-top: 8.5vh;
+        float: left;
+    }
 }
