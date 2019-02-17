@@ -298,6 +298,12 @@ p{
     }
 }
 
+@media (max-height: 650px){
+    #next{
+        top: 41vh;
+    }
+}
+
 @media (max-width: 1850px){
     #addBtn{
         left: 26%;
