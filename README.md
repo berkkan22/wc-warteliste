@@ -8,7 +8,7 @@ Das Programm wurde von mir, **Berkkan Katirci** im Jahre 2019 erstellt und ist m
 Für mehr Deatail siehe "License.md".
 
 
-
+<!--
           _.--.._ ..----.. _..--.
         ,'      `'        `'  _  `.
        :   ,';               `.`.  :
@@ -32,3 +32,4 @@ Für mehr Deatail siehe "License.md".
      : :.    ;  ;          : :.    ;  ;
       \ `::.' ,'            \ `::.'  /
        `-...-'               `-....-'
+-->
