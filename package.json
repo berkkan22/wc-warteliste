@@ -1,7 +1,7 @@
 {
   "name": "wcwarteliste",
   "version": "1.0.0",
-  "description": "",
+  "description": "Toilettenliste",
   "main": "index.js",
   "scripts": {
     "start": "electron .",
@@ -11,13 +11,16 @@
     "package-linux32": "electron-packager . --overwrite --platform=linux --arch=ia32",
     "package-ios64": "electron-packager . --overwrite --platform=darwin --arch=x64"
   },
+  "build": {
+    "productName": "Toilettenliste"
+  },
   "author": "Berkkan Katirci",
   "license": "MIT",
   "devDependencies": {
-    "electron-packager": "^13.0.1"
+    "electron-packager": "^13.0.1",
+    "electron": "^4.0.4"
   },
   "dependencies": {
-    "electron": "^4.0.4",
     "electron-winstaller": "^2.7.0",
     "typed.js": "^2.0.10"
   }
