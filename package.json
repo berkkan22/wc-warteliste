@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "electron": "^4.0.4",
-    "electron-winstaller": "^2.7.0"
+    "electron-winstaller": "^2.7.0",
+    "typed.js": "^2.0.10"
   }
 }

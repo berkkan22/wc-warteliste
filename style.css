@@ -394,3 +394,7 @@ p{
         float: left;
     }
 }
+
+#typed {
+    display: inline;
+}
