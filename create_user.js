@@ -39,11 +39,6 @@ function add() {
         snackBar_Name();
     }
 
-    // console.log(namesArray);
-    // if(firstname == namesArray[0]){
-    //     userOnFirstPlace(firstname);
-    // }
-
     displayName(namesArray);
 
 }
@@ -111,17 +106,15 @@ function next() {
     userOnFirstPlace(name);
 }
 
-var removeedUserConut = 0;
-
 function skipUser() {
     if (booluser) {
         // console.log("remove");
-        removeedUserConut++;
         removeUser();
     } else {
         // console.log("not remove");
     }
 }
+
 
 function removeUser() {
     namesArray.shift();
@@ -130,27 +123,6 @@ function removeUser() {
 
     // console.log(namesArray.length);
 }
-
-
-
-// function userOnFirstPlace(name) {
-//     var start = new Date().getTime();
-//     console.log(start);
-    // var start = new Date().getTime();
-    // console.log(name)
-
-
-    // setInterval(function () {
-    //     var end = new Date().getTime();
-    //     console.log(end)
-    // }, 3000);
-// }
-
-
-// var end = new Date().getTime();
-// var time = end - start;
-// alert('Execution time: ' + time);
-
 
 function snackBar_Name() {
     var x = document.getElementById("snackbar");
@@ -167,3 +139,30 @@ function snackBar_Platz() {
         x.className = x.className.replace("show", "");
     }, 3000);
 }
+
+
+/*
+          _.--.._ ..----.. _..--.
+        ,'      `'        `'  _  `.
+       :   ,';               `.`.  :
+       |  : /                  \ ) |
+       :  `:    __        __    :  ;
+        `-.|   (o_)  __  (o_)   |-' 
+           :        ___         ;
+      __    \      (:::)       /    __
+    ,'  `.   `.     `-'      ,'   ,'  `.
+   :      `-._.`.. `---' _..'._.-'      :
+   :      ) /     \`---''/     \'    ,  ;
+    `._ .  /       `.   /       \  -'_.'
+       :-,'          `.'         `.-:
+       `'-._;           B.K    :_.-`'
+           /                    \
+         _:__                  __:_
+       ,' _  `.              ,' _  `.
+      / ,' `.  \            / ,' `.  \
+     : :     :  :          : :     :  :
+     | |     |  |::..____.:| |     |  |
+     : :.    ;  ;          : :.    ;  ;
+      \ `::.' ,'            \ `::.'  /
+       `-...-'               `-....-'
+*/

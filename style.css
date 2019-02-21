@@ -195,7 +195,7 @@ p {
     float: left;
     width: 15%;
     min-width: 40px;
-    max-width: 60px;
+    max-width: 58px;
     height: 100%;
     background: rgb(134, 170, 199);
     font-size: 1.5em;
@@ -203,10 +203,12 @@ p {
     line-height: 5vh;
     border-right: 1.5px solid;
     border-left: 1.5px solid;
+    font-size: 30px;
 }
 
 #firstNr {
     border-left: 0px solid;
+    max-width: 59px;
 }
 
 .name {
@@ -216,7 +218,9 @@ p {
     min-width: 145px;
     font-size: 1.5em;
     text-align: center;
-    line-height: 5vh;
+    padding-top: 1.2vh;
+    margin-left: -20px;
+    font-size: 30px;
 }
 
 #bottomInput {
@@ -296,11 +300,29 @@ p{
     #next{
         top: 49vh;
     }
+
+    .name{
+        font-size: 29px;
+        padding-top: 0.8vh;
+    }
+
+    .nummer{
+        font-size: 29px;
+    }
 }
 
 @media (max-height: 650px){
     #next{
-        top: 41vh;
+        top: 46vh;
+    }
+
+    .name{
+        font-size: 25px;
+        padding-top: 0.6vh;
+    }
+
+    .nummer{
+        font-size: 26px;
     }
 }
 
@@ -398,3 +420,28 @@ p{
 #typed {
     display: inline;
 }
+
+
+/*        _.--.._ ..----.. _..--.
+        ,'      `'        `'  _  `.
+       :   ,';               `.`.  :
+       |  : /                  \ ) |
+       :  `:    __        __    :  ;
+        `-.|   (o_)  __  (o_)   |-'
+           :        ___         ;
+      __    \      (:::)       /    __
+    ,'  `.   `.     `-'      ,'   ,'  `.
+   :      `-._.`.. `---' _..'._.-'      :
+   :      ) /     \`---''/     \'    ,  ;
+    `._ .  /       `.   /       \  -'_.'
+       :-,'          `.'         `.-:
+       `'-._;           B.K    :_.-`'
+           /                    \
+         _:__                  __:_
+       ,' _  `.              ,' _  `.
+      / ,' `.  \            / ,' `.  \
+     : :     :  :          : :     :  :
+     | |     |  |::..____.:| |     |  |
+     : :.    ;  ;          : :.    ;  ;
+      \ `::.' ,'            \ `::.'  /
+       `-...-'               `-....-' */

@@ -9,8 +9,6 @@ const {
     globalShortcut
 } = electron;
 
-// process.env.NODE_ENV = 'production';
-
 let mainWindow;
 
 // Listen for app to be ready
@@ -23,14 +21,6 @@ app.on('ready', function () {
         protocol: 'file:',
         slashes: true,
     }));
-
-    // mainWindow.win.setMenuBarVisibility(hide);
-
-    // build menu from template
-    // const mainMenu = Menu.buildFromTemplate(mainMenuTemplate);
-    // // insert menu
-    // Menu.setApplicationMenu(mainMenu);
-
 
     globalShortcut.register('F11', () => {
         toggleFullscreen();
@@ -53,7 +43,6 @@ const mainMenuTemplate = [{
 
 }];
 
-
 function toggleFullscreen() {
     if (mainWindow.isFullScreen()) {
         mainWindow.setFullScreen(false);
@@ -62,3 +51,30 @@ function toggleFullscreen() {
         mainWindow.setFullScreen(true);
     }
 }
+
+
+/*
+          _.--.._ ..----.. _..--.
+        ,'      `'        `'  _  `.
+       :   ,';               `.`.  :
+       |  : /                  \ ) |
+       :  `:    __        __    :  ;
+        `-.|   (o_)  __  (o_)   |-'
+           :        ___         ;
+      __    \      (:::)       /    __
+    ,'  `.   `.     `-'      ,'   ,'  `.
+   :      `-._.`.. `---' _..'._.-'      :
+   :      ) /     \`---''/     \'    ,  ;
+    `._ .  /       `.   /       \  -'_.'
+       :-,'          `.'         `.-:
+       `'-._;           B.K    :_.-`'
+           /                    \
+         _:__                  __:_
+       ,' _  `.              ,' _  `.
+      / ,' `.  \            / ,' `.  \
+     : :     :  :          : :     :  :
+     | |     |  |::..____.:| |     |  |
+     : :.    ;  ;          : :.    ;  ;
+      \ `::.' ,'            \ `::.'  /
+       `-...-'               `-....-'
+*/
