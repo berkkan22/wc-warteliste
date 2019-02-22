@@ -26,10 +26,18 @@ function add() {
     // console.log(name);
 
     if (namesArray.length < 12 && name !== "" && name !== " " && name.length < 20) {
-        namesArray.push(name);
-        // console.log(namesArray);
-        document.getElementById('nameInput').value = null;
-        document.getElementById('nameInput').style.borderColor = '';
+        chefCheck(name);
+
+        if (cheffunctionbool == true) {
+            // console.log('First');
+            cheffunction(name);
+            console.log(namesArray)
+        } else {
+            namesArray.push(name);
+            // console.log(namesArray);
+            document.getElementById('nameInput').value = null;
+            document.getElementById('nameInput').style.borderColor = '';
+        }
     } else if (namesArray.length == 12) {
         snackBar_Platz();
         document.getElementById('nameInput').style.borderColor = 'red';
@@ -43,6 +51,35 @@ function add() {
 
 }
 
+var cheffunctionbool;
+
+function chefCheck(name) {
+    var splitName = name.split(" ");
+    if (splitName[0] == 'Chef') {
+        cheffunctionbool = true;
+    } else {
+        cheffunctionbool = false;
+    }
+}
+
+function cheffunction(name) {
+    var text = document.getElementById('frei').innerText;
+    var splitName = name.split(" ");
+
+    console.log(text);
+
+    if(text == 'besetzt'){
+        namesArray.splice(1, 0, splitName[1]);
+        document.getElementById('nameInput').value = null;
+        document.getElementById('nameInput').style.borderColor = '';
+    }
+    else{
+        namesArray.unshift(splitName[1]);
+        document.getElementById('nameInput').value = null;
+        document.getElementById('nameInput').style.borderColor = '';
+    }
+}
+
 function displayName(array) {
 
     for (var i = 0; i < array.length; i++) {
@@ -50,20 +87,10 @@ function displayName(array) {
         document.getElementById("output" + i).innerHTML = array[i];
     }
     var a = i + 1;
-    document.getElementById("output" + i).innerHTML = "";
-}
-
-
-function inputLength() {
-    var inputlen = document.getElementById('nameInput').value;
-
-    if (inputLength > 20) {
-        // border color red
-        // message to long
-        document.getElementById('nameInput').style.borderColor = 'red';
+    if (namesArray.length < 12) {
+        document.getElementById("output" + i).innerHTML = "";
     }
 }
-
 
 var click = false;
 var booluser = false;
@@ -99,14 +126,13 @@ function next() {
             click = false;
             booluser = true;
 
-            skipUser();
+            skipedUser();
         }
     }
     var name = document.getElementById('output0').innerHTML;
-    userOnFirstPlace(name);
 }
 
-function skipUser() {
+function skipedUser() {
     if (booluser) {
         // console.log("remove");
         removeUser();
@@ -142,27 +168,5 @@ function snackBar_Platz() {
 
 
 /*
-          _.--.._ ..----.. _..--.
-        ,'      `'        `'  _  `.
-       :   ,';               `.`.  :
-       |  : /                  \ ) |
-       :  `:    __        __    :  ;
-        `-.|   (o_)  __  (o_)   |-' 
-           :        ___         ;
-      __    \      (:::)       /    __
-    ,'  `.   `.     `-'      ,'   ,'  `.
-   :      `-._.`.. `---' _..'._.-'      :
-   :      ) /     \`---''/     \'    ,  ;
-    `._ .  /       `.   /       \  -'_.'
-       :-,'          `.'         `.-:
-       `'-._;           B.K    :_.-`'
-           /                    \
-         _:__                  __:_
-       ,' _  `.              ,' _  `.
-      / ,' `.  \            / ,' `.  \
-     : :     :  :          : :     :  :
-     | |     |  |::..____.:| |     |  |
-     : :.    ;  ;          : :.    ;  ;
-      \ `::.' ,'            \ `::.'  /
-       `-...-'               `-....-'
+    ʕ•ᴥ•ʔ
 */
