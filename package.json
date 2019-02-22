@@ -9,7 +9,8 @@
     "package-win32": "electron-packager . --overwrite --platform=win32  --arch=ia32",
     "package-linux64": "electron-packager . --overwrite --platform=linux --arch=x64",
     "package-linux32": "electron-packager . --overwrite --platform=linux --arch=ia32",
-    "package-ios64": "electron-packager . --overwrite --platform=darwin --arch=x64"
+
+    "asarPack": "asar pack build/wcwarteliste-linux-ia32/resources/app build/wcwarteliste-linux-ia32/resources/app.asar"
   },
   "build": {
     "productName": "Toilettenliste"
@@ -17,8 +18,9 @@
   "author": "Berkkan Katirci",
   "license": "MIT",
   "devDependencies": {
-    "electron-packager": "^13.0.1",
-    "electron": "^4.0.4"
+    "asar": "^1.0.0",
+    "electron": "^4.0.4",
+    "electron-packager": "^13.0.1"
   },
   "dependencies": {
     "electron-winstaller": "^2.7.0",
