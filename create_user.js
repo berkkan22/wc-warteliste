@@ -1,10 +1,8 @@
 var namesArray = [];
 
 console.log("Start");
-const electron = require('electron');
-const {
-    ipcRenderer
-} = electron;
+const electron = require("electron");
+const { ipcRenderer } = electron;
 
 // Get the input field
 var input = document.getElementById("nameInput");
@@ -25,37 +23,37 @@ function add() {
     var firstname = document.getElementById("output0").innerHTML;
     // console.log(name);
 
-    if (namesArray.length < 12 && name !== "" && name !== " " && name.length < 20) {
+    if (namesArray.length < 12 && name !== "" && name !== " ") {
         chefCheck(name);
 
         if (cheffunctionbool == true) {
             // console.log('First');
             cheffunction(name);
-            console.log(namesArray)
+            console.log(namesArray);
         } else {
             namesArray.push(name);
+
             // console.log(namesArray);
-            document.getElementById('nameInput').value = null;
-            document.getElementById('nameInput').style.borderColor = '';
+            document.getElementById("nameInput").value = null;
+            document.getElementById("nameInput").style.borderColor = "";
         }
     } else if (namesArray.length == 12) {
         snackBar_Platz();
-        document.getElementById('nameInput').style.borderColor = 'red';
+        document.getElementById("nameInput").style.borderColor = "red";
     } else {
-        document.getElementById('nameInput').style.borderColor = 'red';
-        document.getElementById('nameInput').value = null;
+        document.getElementById("nameInput").style.borderColor = "red";
+        document.getElementById("nameInput").value = null;
         snackBar_Name();
     }
 
     displayName(namesArray);
-
 }
 
 var cheffunctionbool;
 
 function chefCheck(name) {
     var splitName = name.split(" ");
-    if (splitName[0] == 'Chef') {
+    if (splitName[0] == "Chef") {
         cheffunctionbool = true;
     } else {
         cheffunctionbool = false;
@@ -63,33 +61,72 @@ function chefCheck(name) {
 }
 
 function cheffunction(name) {
-    var text = document.getElementById('frei').innerText;
+    var text = document.getElementById("frei").innerText;
     var splitName = name.split(" ");
 
     console.log(text);
 
-    if(text == 'besetzt'){
+    if (text == "besetzt") {
         namesArray.splice(1, 0, splitName[1]);
-        document.getElementById('nameInput').value = null;
-        document.getElementById('nameInput').style.borderColor = '';
-    }
-    else{
+        document.getElementById("nameInput").value = null;
+        document.getElementById("nameInput").style.borderColor = "";
+    } else {
         namesArray.unshift(splitName[1]);
-        document.getElementById('nameInput').value = null;
-        document.getElementById('nameInput').style.borderColor = '';
+        document.getElementById("nameInput").value = null;
+        document.getElementById("nameInput").style.borderColor = "";
     }
 }
 
 function displayName(array) {
-
     for (var i = 0; i < array.length; i++) {
         // txt += array[i] + "," + " ";
-        document.getElementById("output" + i).innerHTML = array[i];
+        var output = document.getElementById("output" + i);
+        output.innerHTML = array[i];
+
+        var outputq = document.getElementById("output" + i).getBoundingClientRect().width;
+        console.log(outputq);
+        
+        if (outputq > 380) {
+            output.innerHTML = nameToLong(array[i], i);
+        } else {
+            output.innerHTML = array[i];
+        }
     }
-    var a = i + 1;
+    //var a = i + 1;
     if (namesArray.length < 12) {
         document.getElementById("output" + i).innerHTML = "";
     }
+}
+
+function nameToLong(name, out) {
+    nameArrayToLong= name.split('');
+    newName = [];
+    for (let i = 0; i < 13; i++) {
+        // console.log(i);
+        newName.push(nameArrayToLong[i]);
+        // console.log(newName);
+    }
+
+    newName.push('...');
+
+    var na = document.getElementById('output'+out).innerHTML = newName.join('');
+    var check = document.getElementById('output'+out).getBoundingClientRect().width;
+
+    // ! Only in my Screen
+    if (check > 380) {
+        newName = [];
+        for (let i = 0; i < 9; i++) {
+            // console.log(i);
+            newName.push(nameArrayToLong[i]);
+            // console.log(newName);
+        }
+
+        newName.push('...');
+    }
+
+
+
+    return newName.join('');
 }
 
 var click = false;
@@ -97,39 +134,39 @@ var booluser = false;
 
 function next() {
     // var state = true;
-    var backgrounddiv = document.getElementById('wcBackground');
-    var text = document.getElementById('frei');
-    var idcell = document.getElementById('cell0Blue');
-    var idcellNext = document.getElementById('cell1Blue');
-    var arrow = document.getElementById('arrow');
-    var next_back = document.getElementById('next');
+    var backgrounddiv = document.getElementById("wcBackground");
+    var text = document.getElementById("frei");
+    var idcell = document.getElementById("cell0Blue");
+    var idcellNext = document.getElementById("cell1Blue");
+    var arrow = document.getElementById("arrow");
+    var next_back = document.getElementById("next");
 
-    document.getElementById('nameInput').style.borderColor = '';
+    document.getElementById("nameInput").style.borderColor = "";
 
     if (namesArray != 0) {
         if (click == false) {
-            text.innerHTML = 'besetzt';
-            backgrounddiv.style.background = 'red';
-            idcell.style.background = 'red';
-            idcellNext.style.background = 'green';
-            arrow.style.borderLeft = '81px solid red';
-            next_back.style.background = 'green';
+            text.innerHTML = "besetzt";
+            backgrounddiv.style.background = "red";
+            idcell.style.background = "red";
+            idcellNext.style.background = "green";
+            arrow.style.borderLeft = "81px solid red";
+            next_back.style.background = "green";
             click = true;
             booluser = false;
         } else if (click == true) {
-            text.innerHTML = 'frei';
-            backgrounddiv.style.background = 'green';
-            idcell.style.background = 'green';
-            idcellNext.style.background = 'rgb(' + 22 + ',' + 99 + ',' + 201 + ')';
-            arrow.style.borderLeft = '81px solid green';
-            next_back.style.background = 'red';
+            text.innerHTML = "frei";
+            backgrounddiv.style.background = "green";
+            idcell.style.background = "green";
+            idcellNext.style.background = "rgb(" + 22 + "," + 99 + "," + 201 + ")";
+            arrow.style.borderLeft = "81px solid green";
+            next_back.style.background = "red";
             click = false;
             booluser = true;
 
             skipedUser();
         }
     }
-    var name = document.getElementById('output0').innerHTML;
+    var name = document.getElementById("output0").innerHTML;
 }
 
 function skipedUser() {
@@ -140,7 +177,6 @@ function skipedUser() {
         // console.log("not remove");
     }
 }
-
 
 function removeUser() {
     namesArray.shift();
@@ -165,7 +201,6 @@ function snackBar_Platz() {
         x.className = x.className.replace("show", "");
     }, 3000);
 }
-
 
 /*
     ʕ•ᴥ•ʔ

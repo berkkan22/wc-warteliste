@@ -59,7 +59,7 @@ p {
     position: absolute;
     top: 55.5%;
     left: 24%;
-        float: left;
+    float: left;
 }
 
 .btn {
@@ -292,121 +292,121 @@ p {
     border-bottom: 50px solid transparent;
 }
 
-p{
+p {
     font-size: 42px;
 }
 
-@media (max-height: 800px){
-    #next{
+@media (max-height: 800px) {
+    #next {
         top: 49vh;
     }
 
-    .name{
+    .name {
         font-size: 29px;
         padding-top: 0.8vh;
     }
 
-    .nummer{
+    .nummer {
         font-size: 29px;
     }
 }
 
-@media (max-height: 650px){
-    #next{
+@media (max-height: 650px) {
+    #next {
         top: 46vh;
     }
 
-    .name{
+    .name {
         font-size: 25px;
         padding-top: 0.6vh;
     }
 
-    .nummer{
+    .nummer {
         font-size: 26px;
     }
 }
 
-@media (max-width: 1850px){
-    #addBtn{
+@media (max-width: 1850px) {
+    #addBtn {
         left: 26%;
     }
 }
 
-@media (max-width: 1700px){
-    #addBtn{
+@media (max-width: 1700px) {
+    #addBtn {
         left: 28%;
     }
 }
 
-@media (max-width: 1580px){
-    #addBtn{
+@media (max-width: 1580px) {
+    #addBtn {
         left: 29%;
     }
 }
 
-@media (max-width: 1540px){
-    #addBtn{
+@media (max-width: 1540px) {
+    #addBtn {
         left: 31%;
     }
 }
 
-@media (max-width: 1450px){
-    #addBtn{
+@media (max-width: 1450px) {
+    #addBtn {
         left: 33%;
     }
 }
 
-@media (max-width: 1350px){
-    #addBtn{
+@media (max-width: 1350px) {
+    #addBtn {
         left: 35%;
     }
 }
 
-@media (max-width: 1260px){
-    #addBtn{
+@media (max-width: 1260px) {
+    #addBtn {
         left: 37%;
     }
 
-    p{
+    p {
         font-size: 30px;
     }
 }
 
-@media (max-width: 1200px){
-    #addBtn{
+@media (max-width: 1200px) {
+    #addBtn {
         left: 39%;
     }
 
     .btn-lg {
         display: inline-block;
-    padding: 6px 12px;
-    margin-bottom: 0;
-    margin-top: 6px;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.42857143;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    -ms-touch-action: manipulation;
-    touch-action: manipulation;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    background-image: none;
-    border: 1px solid transparent;
-    border-radius: 4px;
+        padding: 6px 12px;
+        margin-bottom: 0;
+        margin-top: 6px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.42857143;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        background-image: none;
+        border: 1px solid transparent;
+        border-radius: 4px;
     }
 }
 
-@media (max-width: 1135px){
-    #addBtn{
+@media (max-width: 1135px) {
+    #addBtn {
         left: 37%;
     }
 
-    #nameInput{
+    #nameInput {
         font-size: 3vh;
         height: 4vh;
         width: 33vw;
@@ -420,6 +420,25 @@ p{
 #typed {
     display: inline;
 }
+
+.marquee {
+    height: 100%;
+    width: 100%;
+    /* border: 2px solid #eee; */
+    overflow: hidden;
+    box-sizing: border-box;
+    position: relative;
+    /* margin: 20px auto; */
+}
+
+.marquee--inner {
+    display: block;
+    width: 200%;
+    /* margin: 70px 0; */
+    position: absolute;
+    animation: marquee 20s linear infinite;
+}
+
 
 
 /*
