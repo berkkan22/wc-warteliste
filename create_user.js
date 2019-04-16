@@ -182,7 +182,7 @@ var booluser = false;
 
 function next() {
     // var state = true;
-    var backgrounddiv = document.getElementById("wcBackground");
+    var backgrounddiv = document.getElementById('wcBackground');
     var text = document.getElementById("frei");
     var idcell = document.getElementById("idNummer0");
     var idcellNext = document.getElementById("idNummer1");

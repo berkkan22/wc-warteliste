@@ -60,9 +60,8 @@ p {
 }
 
 #addBtn>div {
-    /* font-size: calc(3vw + 3vh); */
+    font-size: medium;
     cursor: default;
-    /* font-size: 2.34vw;; */
 }
 
 #nameInput {
@@ -205,6 +204,24 @@ td {
 
 #typed {
     display: inline;
+}
+
+@media (min-width: 825px) {
+    #addBtn>div {
+        font-size: large;
+    }
+}
+
+@media (min-width: 1002px) {
+    #addBtn>div {
+        font-size: larger;
+    }
+}
+
+@media (min-height: 830px) {
+    #addBtn>div {
+        font-size: 22px;
+    }
 }
 
 
