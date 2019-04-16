@@ -1,8 +1,10 @@
 var namesArray = [];
+snackBar_FullScreen();
 
 console.log("Start");
 const electron = require("electron");
 const { ipcRenderer } = electron;
+
 
 // Get the input field
 var input = document.getElementById("nameInput");
@@ -83,14 +85,19 @@ function displayName(array) {
         var output = document.getElementById("output" + i);
         output.innerHTML = array[i];
 
-        var outputq = document.getElementById("output" + i).getBoundingClientRect().width;
-        console.log(outputq);
-        
-        if (outputq > 380) {
-            output.innerHTML = nameToLong(array[i], i);
-        } else {
-            output.innerHTML = array[i];
-        }
+
+        // console.log('r'+w);
+
+        // var outputWidth = output.getBoundingClientRect().width;
+        // console.log(outputq);
+
+        // if (outputWidth > w) {
+        //     output.innerHTML = nameToLong(array[i], i);
+        //     console.log('TO long');
+        //     // console.log('print');
+        // } else {
+        // output.innerHTML = array[i];
+        // }
     }
     //var a = i + 1;
     if (namesArray.length < 12) {
@@ -98,36 +105,77 @@ function displayName(array) {
     }
 }
 
-function nameToLong(name, out) {
-    nameArrayToLong= name.split('');
-    newName = [];
-    for (let i = 0; i < 13; i++) {
-        // console.log(i);
-        newName.push(nameArrayToLong[i]);
-        // console.log(newName);
-    }
+// function onResize() {
+//     w = document.getElementById('test').getBoundingClientRect().width;
+//     console.log(w);
+//     // return document.getElementById('test').getBoundingClientRect().width;
+// }
 
-    newName.push('...');
+// function nameToLong(name, index) {
+//     // var w = document.getElementsByClassName('name_header').offsetWidth;
+//     // console.log(w);
 
-    var na = document.getElementById('output'+out).innerHTML = newName.join('');
-    var check = document.getElementById('output'+out).getBoundingClientRect().width;
+//     nameArrayToLong = name.split('');
+//     newName = [];
+//     var k = 15;
 
-    // ! Only in my Screen
-    if (check > 380) {
-        newName = [];
-        for (let i = 0; i < 9; i++) {
-            // console.log(i);
-            newName.push(nameArrayToLong[i]);
-            // console.log(newName);
-        }
-
-        newName.push('...');
-    }
+//     var output = document.getElementById("output" + index);
+//     var outputWidth = output.getBoundingClientRect().width;
 
 
+//     while (w < outputWidth) {
 
-    return newName.join('');
-}
+//         newName = [];
+//         for (let i = 0; i < k; i++) {
+//             newName.push(nameArrayToLong[i]);
+//         }
+
+//         newName.push('...');
+
+//         if (k != 0) {
+//             k = k - 1;
+//         }
+
+//         output.innerHTML = newName;
+//         outputWidth = output.getBoundingClientRect().width;
+//         console.log('While ' + outputWidth);
+
+//         if (w == outerWidth) {
+//             break;
+//         }
+//     }
+
+
+
+
+// var k = 15
+
+// var wr = w;
+
+// console.log(w);
+
+// for (let j = 0; j < nameArrayToLong.length; j++) {
+//     newName = [];
+
+//     for (let i = 0; i < k; i++) {
+//         newName.push(nameArrayToLong[i]);
+//     }
+//     newName.push('...');
+
+//     document.getElementById('output' + index).innerHTML = newName;
+//     var ow = document.getElementById('output' + index).getBoundingClientRect().width;
+
+//     if (ow <= wr) {
+//         break;
+//     }
+
+//     k--;
+// }
+
+// document.getElementById('output'+index).getBoundingClientRect().width;
+
+//     return newName.join('');
+// }
 
 var click = false;
 var booluser = false;
@@ -136,8 +184,8 @@ function next() {
     // var state = true;
     var backgrounddiv = document.getElementById("wcBackground");
     var text = document.getElementById("frei");
-    var idcell = document.getElementById("cell0Blue");
-    var idcellNext = document.getElementById("cell1Blue");
+    var idcell = document.getElementById("idNummer0");
+    var idcellNext = document.getElementById("idNummer1");
     var arrow = document.getElementById("arrow");
     var next_back = document.getElementById("next");
 
@@ -191,11 +239,19 @@ function snackBar_Name() {
     x.className = "show";
     setTimeout(function () {
         x.className = x.className.replace("show", "");
-    }, 3000);
+    }, 2000);
 }
 
 function snackBar_Platz() {
     var x = document.getElementById("snackbar1");
+    x.className = "show";
+    setTimeout(function () {
+        x.className = x.className.replace("show", "");
+    }, 2000);
+}
+
+function snackBar_FullScreen() {
+    var x = document.getElementById("snackbar2");
     x.className = "show";
     setTimeout(function () {
         x.className = x.className.replace("show", "");

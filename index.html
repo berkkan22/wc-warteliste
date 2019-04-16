@@ -7,6 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
     <script src="node_modules/typed.js/lib/typed.js"></script>
+    <!-- <link rel="stylesheet" type="text/css"
+        href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" /> -->
+    <!-- <script src="https://code.jquery.com/jquery-latest.js"></script> -->
+
     <title>WC warte Liste</title>
 </head>
 
@@ -14,6 +18,7 @@
 
     <div id="snackbar">Ungüliger Name</div>
     <div id="snackbar1">Kein Platz</div>
+    <div id="snackbar2">Für Vollbild F11 drücken</div>
 
     <div id="main">
         <div id="wcBackground">
@@ -33,141 +38,63 @@
                 </script>
                 <div id="addBtn" onclick="add()">
                     <!-- <div id="cross"></div> -->
-                    <a href="#" class="btn btn-info btn-lg">
-                        <span class="glyphicon glyphicon-plus"></span>
-                        Hinzufügen
-                    </a>
+                    <div id="kreuz">+</div>
+                    <div id="text">Hinzufügen</div>
                 </div>
-                <div id="next" onclick="next()">
-                    <div id="arrow"></div>
-                </div>
+            </div>
+            <div id="next" onclick="next()">
+                <div id="arrow"></div>
             </div>
         </div>
-        <div id="divnames">
-            <div id="init">
-                <div class="container">
-                    <div class="nummer" id="firstNr">Nr.</div>
-                    <div class="name">Name</div>
-                </div>
-                <div class="container">
 
-                    <div class="nummer">Nr.</div>
-                    <div class="name">Name</div>
-                </div>
-                <div class="container">
-                    <div class="nummer">Nr.</div>
-                    <div class="name">Name</div>
-                </div>
+        <table>
+            <thead>
+                <tr>
+                    <td class="nummer_header" style="border-left: 0px; border-top: 0px;">Nr.</td>
+                    <td class="name_header" style="border-top: 0px;" id="test">Name</td>
+                    <td class="nummer_header" style="border-top: 0px;">Nr.</td>
+                    <td class="name_header" style="border-top: 0px;">Name</td>
+                    <td class="nummer_header" style="border-top: 0px;">Nr.</td>
+                    <td class="name_header" style="border-right: 0px; border-top: 0px;">Name</td>
+                </tr>
+            </thead>
 
-            </div>
-            <div class="divTableBody">
-                <div class="divTableRow" id="firstrow">
-                    <div class="divTableCell">
-                        <div class="id" id="cell0Blue">
-                            <p class="idcell" id="cell0">1</p>
-                        </div>
-                        <div class="nameOutput">
-                            <p id="output0"></p>
-                        </div>
-                    </div>
-                    <div class="divTableCell">
-                        <div class="id">
-                            <p class="idcell" id="cell4">5</p>
-                        </div>
-                        <div class="nameOutput">
-                            <p id="output4"></p>
-                        </div>
-                    </div>
-                    <div class="divTableCell">
-                        <div class="id">
-                            <p class="idcell" id="cell8">9</p>
-                        </div>
-                        <div class="nameOutput">
-                            <p id="output8"></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="divTableRow">
-                    <div class="divTableCell">
-                        <div class="id" id="cell1Blue">
-                            <p class="idcell" id="cell1">2</p>
-                        </div>
-                        <div class="nameOutput">
-                            <p id="output1"></p>
-                        </div>
-                    </div>
-                    <div class="divTableCell">
-                        <div class="id">
-                            <p class="idcell" id="cell5">6</p>
-                        </div>
-                        <div class="nameOutput">
-                            <p id="output5"></p>
-                        </div>
-                    </div>
-                    <div class="divTableCell">
-                        <div class="id">
-                            <p class="idcell" id="cell9">10</p>
-                        </div>
-                        <div class="nameOutput">
-                            <p id="output9"></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="divTableRow">
-                    <div class="divTableCell">
-                        <div class="id">
-                            <p class="idcell" id="cell2">3</p>
-                        </div>
-                        <div class="nameOutput">
-                            <p id="output2"></p>
-                        </div>
-                    </div>
-                    <div class="divTableCell">
-                        <div class="id">
-                            <p class="idcell" id="cell6">7</p>
-                        </div>
-                        <div class="nameOutput">
-                            <p id="output6"></p>
-                        </div>
-                    </div>
-                    <div class="divTableCell">
-                        <div class="id">
-                            <p class="idcell" id="cell10">11</p>
-                        </div>
-                        <div class="nameOutput">
-                            <p id="output10"></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="divTableRow" id="lastrow">
-                    <div class="divTableCell">
-                        <div class="id">
-                            <p class="idcell" id="cell3">4</p>
-                        </div>
-                        <div class="nameOutput">
-                            <p id="output3"></p>
-                        </div>
-                    </div>
-                    <div class="divTableCell">
-                        <div class="id">
-                            <p class="idcell" id="cell7">8</p>
-                        </div>
-                        <div class="nameOutput">
-                            <p id="output7"></p>
-                        </div>
-                    </div>
-                    <div class="divTableCell">
-                        <div class="id">
-                            <p class="idcell" id="cell11">12</p>
-                        </div>
-                        <div class="nameOutput">
-                            <p id="output11"></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <p id="p3"></p>
-        </div>
+            <tbody>
+                <tr>
+                    <td class="nummer" id="idNummer0" style="border-left: 0px">1</td>
+                    <td class="name" id="output0"></td>
+                    <td class="nummer">5</td>
+                    <td class="name" id="output4"></td>
+                    <td class="nummer">9</td>
+                    <td class="name" id="output8" style="border-right: 0px"></td>
+                </tr>
+                <tr>
+                    <td class="nummer" id="idNummer1" style="border-left: 0px">2</td>
+                    <td class="name" id="output1"></td>
+                    <td class="nummer">6</td>
+                    <td class="name" id="output5"></td>
+                    <td class="nummer">10</td>
+                    <td class="name" id="output9" style="border-right: 0px"></td>
+                </tr>
+                <tr>
+                    <td class="nummer" style="border-left: 0px">3</td>
+                    <td class="name" id="output2"></td>
+                    <td class="nummer">7</td>
+                    <td class="name" id="output6"></td>
+                    <td class="nummer">11</td>
+                    <td class="name" id="output10" style="border-right: 0px"></td>
+                </tr>
+                <tr>
+                    <td class="nummer" style="border-left: 0px; border-bottom: 0px; padding-bottom: 0px;">4</td>
+                    <td class="name" id="output3" style="border-bottom: 0px; padding-bottom: 0px;"></td>
+                    <td class="nummer" style="border-bottom: 0px; padding-bottom: 0px;">8</td>
+                    <td class="name" id="output7" style="border-bottom: 0px; padding-bottom: 0px;"></td>
+                    <td class="nummer" style="border-bottom: 0px; padding-bottom: 0px;">12</td>
+                    <td class="name" id="output11" style="border-right: 0px; border-bottom: 0px; padding-bottom: 0px;">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
     <script src="create_user.js"></script>
